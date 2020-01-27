@@ -16,3 +16,13 @@ http.request(GET,TEXT) { req ->
     } 
 
 }
+
+def extract = result =~ /^downloads\((.+)\)$/ 
+  if (!extract.matches()) { 
+    throw new RuntimeException("Bad jsonp!") 
+     }
+
+def parsed = new JsonSlurper().parseText(extract.group(1)) 
+def filterVersion = parsed.findAll { map -> map.platform == 'Unix' && map.description =~ 'Linux 64'}
+
+FilterVersion.version
