@@ -8,13 +8,9 @@ import static groovyx.net.http.Method.*
 
 def http = new HTTPBuilder( 'https://my.atlassian.com/download/feeds/current/jira-software.json' ) 
 http.request(GET,TEXT) { req -> 
-
       response.success = { resp, reader -> 
-
       result = reader.text 
-
     } 
-
 }
 
 def extract = result =~ /^downloads\((.+)\)$/ 
