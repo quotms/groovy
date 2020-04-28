@@ -1,0 +1,26 @@
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>com.jenkins.slave</string>
+        <key>UserName</key>
+        <string>user</string>
+        <key>ProgramArguments</key>
+        <array>
+                <string>/usr/bin/java</string>
+                <string>-jar</string>
+                <string>/tmp/slave.jar</string>
+                <string>-jnlpUrl</string>
+                <string>http://localhost:8080/computer/test-agent/slave-agent.jnlp</string>
+                <string>-secret</string>
+                <string>here_secret</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>KeepAlive</key>
+        <true/>
+        <key>StandardOutPath</key>
+        <string>/Users/a16706646/Documents/stdout.log</string>
+        <key>StandardErrorPath</key>
+        <string>/Users/a16706646/Documents/stdout.log</string>
+</dict>
+</plist>
