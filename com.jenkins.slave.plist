@@ -19,8 +19,8 @@
         <key>KeepAlive</key>
         <true/>
         <key>StandardOutPath</key>
-        <string>/Users/a16706646/Documents/stdout.log</string>
+        <string>/Users/user/Documents/stdout.log</string>
         <key>StandardErrorPath</key>
-        <string>/Users/a16706646/Documents/stdout.log</string>
+        <string>/Users/user/Documents/stdout.log</string>
 </dict>
 </plist>
